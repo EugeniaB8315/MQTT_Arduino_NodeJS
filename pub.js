@@ -11,7 +11,7 @@ const pub = mqtt.connect('mqtt://localhost:9000')
 
 pub.on('connect',()=>{
     parser.on('data',(data)=> {
-        pub.publish('parametro1', data);
+        pub.publish('topic_param[1]', data);
     })
 
 })
