@@ -15,4 +15,4 @@ broker.on('clinetConnected', (client)=>{
 
 broker.on('published',(packet)=>{
     console.log(packet.payload.toString())
-})
+}) 

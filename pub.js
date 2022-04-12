@@ -1,11 +1,12 @@
 const mqtt = require('mqtt')
-const serialport = requier('serialport')
 
-const port = new serialport('COM8',{
-    baudRate:9600
+const serialport = require('serialport')
+
+const port = new serialport('COM11',{
+    baudRate: 9600
 })
 
-const parser = port.pipe(new serialport.parser.Readline({delimiter: '\n'}))
+const parser = port.pipe(new serialport.parsers.Readline({delimiter: '\n'}))
 
 const pub = mqtt.connect('mqtt://localhost:9000')
 
