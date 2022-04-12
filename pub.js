@@ -1,7 +1,7 @@
 const mqtt = require('mqtt')
 const serialport = requier('serialport')
 
-const port = new serialport('COM4',{
+const port = new serialport('COM8',{
     baudRate:9600
 })
 
